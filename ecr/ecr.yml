@@ -1,0 +1,13 @@
+Description: >
+    Ignacio Hidalgo / Udacity
+
+Parameters:
+    EnvironmentName:
+        Description: An environment name that will be prefixed to resource names
+        Type: String
+
+Resources:
+    ECRBackend:
+        Type: AWS::ECR::Repository
+        Properties:
+            RepositoryName: !Sub ${EnvironmentName}/backend
